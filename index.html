@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			margin:0%;
+			background-color:"green";
+			background-size:100%;
+			background-repeat:none;
+			background-position: absolute;
+			background-attachment: scroll;
+		}
+		#image{
+			max-width:500px;
+			height:350px;
+			width:950px;
+		}
+		.img{
+			right:0px;
+			margin:20px auto;
+			position:relative;
+			text-align:center;
+			background-color:pink;
+			opacity:0.85;
+		}
+		.nav li{
+			float:left;
+			margin:0px 10px;
+			list-style: none;
+			padding:20px 15px;
+			box-shadow: 2px 3px 0px gray;
+			border-radius:40px;
+			font-weight: bold;
+			text-align: center;
+		}
+		.nav li:hover{
+			background-color:brown;
+			color:pink;
+		}
+		.handles img{
+			clear:float;
+			height:45px;
+			width:45px;
+			margin:10px auto;
+			}
+			.handles{
+			position:sticky;
+			float:right;
+			z-index:99;
+			top:0;
+			right:0;
+			}
+
+		.handles li{
+			list-style:none;
+		}
+
+		.cards{
+			display:flex;
+			flex-wrap:wrap;
+			flex-basis: 100%;
+			margin:-3% 0.5% 5% 3.5%;
+		}
+		.card{
+			margin:5% 0.5% 5% 0%;
+		}
+		.card img{
+			margin: 5px auto;
+      height:50%;
+
+		}
+		.card img:hover{
+			transform: scale(1.1);
+		}
+		.cards li:hover{
+			background-color:brown;
+			color:pink;
+		}
+		.search{
+			margin:50px 0px 15px 4px;
+		}
+		.search img{
+			height:45px;
+			width:45px;
+			margin:-8px 0px 0px -52px;
+			border-radius:8px;
+		}
+		.search input{
+			min-width:25%; 
+			width:35%;
+			height:50px;
+			padding:25px auto;
+			border:solid 4px pink;
+			border-radius:18px;
+			font-size:20px;
+			}
+		
+		.brands img{
+			display:inline-flex;
+			flex-wrap:wrap;
+			flex-basis: 100%;
+			height:250px;
+			width:250px;
+			margin:10px 50px;
+			padding:20px 10px;
+			}
+			.brands{
+			margin:10px 0px 30px 155px;
+			}
+		.option{
+			margin:20px 0px 0px 10px;
+
+		}
+		select{
+			font-size:48px;
+			height:40px;
+			width:10%;
+			border: 2px solid grey;
+			border-radius:5px;
+			background-color:white;
+			color:black;
+			font-weight:bold;
+			font-family:monotype corsiva;
+		}
+	
+		.title h1{
+			margin:0px 35px 0px 35px;
+			border-radius:50px;
+			border: 5px solid brown;
+			animation-name:change;
+			animation-duration: 1s;
+			animation-iteration-count:infinite;
+			
+		}
+		@keyframes change{
+			0%{border-left-color:pink}
+			25%{border-top-color:pink;}
+			50%{border-right-color:pink;}
+			100%{border-bottom-color:pink;};
+		}
+	</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<title>SHOE BLISS</title>
+</head>
+<body>
+<div class="nav">
+	<img id="spin" src="spin.gif" 
+" alt="spin" title="spin" style="width:75px;height:75px; float:right;"/>
+	<ul><li>Home</li>
+	<li>Menu</li>
+<li>About</li>
+<li>Contact</li>
+</ul>
+</div>
+
+<div class="img">
+<img id="image" src="shoe.png" alt="shoe" title="shoe"/>
+</div>
+
+<div class="handles">
+	<ul><li>
+	<img src="d1.png"/></li><li>
+	<img src="d2.png"/></li><li>
+	<img src="d3.png"/></li><li>
+	<img src="d4.png"/></li></ul>
+</div>
+
+
+<div class="title">
+<h1 style="text-align:center; font-family:tahoma; font-weight:bold; font-size:72px;">SHOE BLISS</h1>	
+</div>
+
+<div class="brands">
+	<img src="brand1.png"/>
+	<img src="brand2.png"/>
+	<img src="brand3.png"/>
+	<img src="brand4.png"/>
+</div>
+
+<marquee style="font-size:24px; font-family:berham; font-weight:bold;"><q>At Shoe Bliss we give you the best shoe products at affordable prices, so what are you waiting for place an order now</q>,<q>At Shoe Bliss we give you the best shoe products at affordable prices, so what are you waiting for place an order now</q>,<q>At Shoe Bliss we give you the best shoe products at affordable prices, so what are you waiting for place an order now</q>,<q>At Shoe Bliss we give you the best shoe products at affordable prices, so what are you waiting for place an order now</q></marquee>
+
+<div class="search">
+	<input type="text" placeholder="search">
+	<img src="search.png"/>
+</div>
+
+
+<div class="option">
+<select>
+	<option value="selected">Random Shoes</option>
+	<option >Men Shoes</option>
+	<option >Women Shoes</option>
+	<option >Kids Shoes</option>
+	<option >Baby Shoes</option>
+</select></div>
+
+<div class="cards">
+<div class="card" style="width:18rem;">
+  <img src="shoe1.jpg"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Shoe</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+  <div class="card" style="width:18rem;">
+  <img src="shoe2.jpg"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe3.jpg"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe4.jpeg"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe5.jpg"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe6.webp
+  "  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe7.jpg"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe8.jpg"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe9.jpg"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe10.jpg"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe11.jpg"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe12.jfif"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe13.jfif"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe14.jfif"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe15.jfif"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe16.jfif"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="shoe17.webp"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+	
+	 <div class="card" style="width:18rem;">
+  <img src="shoe18.jpeg"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="slider1.png"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="slider3.png"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+   <div class="card" style="width:18rem;">
+  <img src="slider4.png"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+   <div class="card" style="width:18rem;">
+  <img src="slider5.png"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+  <div class="card" style="width:18rem;">
+  <img src="shoe.png"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+
+  <div class="card" style="width:18rem;">
+  <img src="spin.gif"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Male Wears</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> </div>
+	</div>
+
+<script type="text/javascript">
+	var image = document.getElementById("image");
+	var images = ["shoe.png","slider1.png","slider2.png","slider3.png","slider4.png","slider5.png"];
+	var img = -1;
+	setInterval(slide,2000);
+	function slide(){
+	if(img >= images.length){
+		img = -1;
+
+	}else{
+		image.src = images[img];
+	}
+	img++
+	}
+	slide();
+</script>
+</body>
+</html>
