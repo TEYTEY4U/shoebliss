@@ -2,14 +2,21 @@
 <html>
 <head>
 	<style type="text/css">
-		body{
-			margin:0%;
-			background-color:"green";
-			background-size:100%;
-			background-repeat:none;
-			background-position: absolute;
-			background-attachment: scroll;
-		}
+	body{
+    margin:0%;
+  }
+  #loader{
+  position: fixed;
+  z-index:9999;
+  width: 100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  background-image: url(loading.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+}
 		#image{
 			max-width:500px;
 			height:350px;
@@ -17,15 +24,36 @@
 		}
 		.img{
 			right:0px;
-			margin:20px auto;
+			margin:0px auto;
 			position:relative;
 			text-align:center;
 			background-color:pink;
-			opacity:0.85;
+			opacity:0.75;
+      clear:both;
 		}
+
+    .nav{
+      background-color:white;
+      position:absolute;
+      z-index:9999;
+      top:0;
+      display:none;
+      margin-top:85px;
+      border-right-style: solid;
+      border-right-width:5px;
+      border-right-color:pink;
+      animation-name:changed;
+      animation-duration: 1s;
+      animation-iteration-count:infinite;
+    }
+    @keyframes changed{
+      0%{border-right-color:brown}
+      25%{border-right-color:pink;}
+      50%{border-right-color:brown;}
+      100%{border-right-color:pink;}; 
+    }
 		.nav li{
-			float:left;
-			margin:0px 10px;
+			margin:10px 10px;
 			list-style: none;
 			padding:20px 15px;
 			box-shadow: 2px 3px 0px gray;
@@ -34,13 +62,24 @@
 			text-align: center;
 		}
 		.nav li:hover{
-			background-color:brown;
+			background-color:pink;
 			color:pink;
 		}
+    
+    #logo,#menu{
+      height:75px;
+      width:auto;
+      float:left;
+      margin:auto 15px;
+    }
+     #cart{
+      height:70px;
+      width:auto;
+      float:right;
+    }
 		.handles img{
-			clear:float;
-			height:45px;
-			width:45px;
+			height:75px;
+			width:75px;
 			margin:10px auto;
 			}
 			.handles{
@@ -49,25 +88,25 @@
 			z-index:99;
 			top:0;
 			right:0;
-			}
+			} 
 
 		.handles li{
 			list-style:none;
-		}
+		} 
 
 		.cards{
 			display:flex;
 			flex-wrap:wrap;
 			flex-basis: 100%;
-			margin:-3% 0.5% 5% 3.5%;
+			margin:-3% 0.5% 0% 3.5%;
 		}
 		.card{
-			margin:5% 0.5% 5% 0%;
+			margin:2% 0.5% 2% 0%;
 		}
 		.card img{
 			margin: 5px auto;
       height:50%;
-
+      width:100%;
 		}
 		.card img:hover{
 			transform: scale(1.1);
@@ -80,9 +119,9 @@
 			margin:50px 0px 15px 4px;
 		}
 		.search img{
-			height:45px;
-			width:45px;
-			margin:-8px 0px 0px -52px;
+			height:55px;
+			width:50px;
+			margin:0px 0px -20px -57px;
 			border-radius:8px;
 		}
 		.search input{
@@ -108,11 +147,11 @@
 			margin:10px 0px 30px 155px;
 			}
 		.option{
-			margin:20px 0px 0px 10px;
+			margin:20px 0px 40px 10px;
 
 		}
 		select{
-			font-size:48px;
+			font-size:36px;
 			height:40px;
 			width:10%;
 			border: 2px solid grey;
@@ -124,51 +163,123 @@
 		}
 	
 		.title h1{
+      justify-content:center;
 			margin:0px 35px 0px 35px;
 			border-radius:50px;
 			border: 5px solid brown;
 			animation-name:change;
 			animation-duration: 1s;
 			animation-iteration-count:infinite;
-			
 		}
 		@keyframes change{
 			0%{border-left-color:pink}
 			25%{border-top-color:pink;}
 			50%{border-right-color:pink;}
-			100%{border-bottom-color:pink;};
-		}
+			100%{border-bottom-color:pink;}; 
+    }
+    input{
+     height:20px;
+     margin:5px 0px 5px 5px;
+     border-radius:4px;
+     padding:3px 0px 3px 0px;
+    }
+    form{
+    margin:1% 10% 3% 10%; 
+    padding:0% 0% 10px 0%;
+    border:3px solid white;
+    border-width:3px;
+    border-height:5px;
+    }
+    header{
+      text-align:center;
+    }
+    footer{
+      margin:0% 0% 1% 0%;
+      padding:0% 0% 0.5px 0%;
+      text-align: center;
+      font-size:24px;
+       background-color:pink;
+       color:black;
+      font-weight:bold;
+      font-family:monotype corsiva;
+    }
+    button{
+      background-color:rgba(050,010,200,0.8);
+      color:white;
+      padding:7px 7px;
+      border:3px solid grey;
+      border-radius: 10px;
+      float:right;
+      margin:-40px 10px 0px 0px;
+    }
+    .view{
+      display: none;
+    }
+    #view{
+      background-color:rgba(050,010,200,0.8);
+      color:white;
+      padding:10px 10px 20px 10px;
+      border:3px solid grey;
+      border-radius: 10px;
+      float:right; 
+      text-align: center;
+      font-size: 11px;
+      margin-bottom:5%;
+    }
+    #contained{
+      position:sticky;
+      z-index: 9999999;
+      top:0;
+      background-color: white;
+      padding-bottom:100px;
+    }
 	</style>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 <title>SHOE BLISS</title>
 </head>
+
 <body>
+  <div id="loader"></div>
+  <div id="container">
+  <div id="contained">    
+    <div class="cart">
+<img id="menu" src="menu.png" alt="menu" title="menulogo" style="margin-bottom:10px;"/>
+<img id="logo" src="logo.jpg" alt="logo" title="brandlogo"/>
+<img id="cart" src="cart.png" alt="cart" title="cartlogo"/>
+
+
 <div class="nav">
-	<img id="spin" src="spin.gif" 
-" alt="spin" title="spin" style="width:75px;height:75px; float:right;"/>
-	<ul><li>Home</li>
-	<li>Menu</li>
-<li>About</li>
-<li>Contact</li>
-</ul>
-</div>
+	<img id="spin" src="spin.gif" alt="spin" title="spin" style="width:75px;height:75px; margin-left:-70px; float:left;"/>
+<ul><li><a href="index.html">Home</a></li>
+	<li><a href="menu.html">Menu</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul></div>
+</div></div>
+
+
 
 <div class="img">
 <img id="image" src="shoe.png" alt="shoe" title="shoe"/>
 </div>
 
 <div class="handles">
-	<ul><li>
-	<img src="d1.png"/></li><li>
-	<img src="d2.png"/></li><li>
-	<img src="d3.png"/></li><li>
-	<img src="d4.png"/></li></ul>
+	<ul>
+  <a href="www.facebook.com"><li>
+	<img src="d1.png"/></li></a>
+  <a href="www.tweeter.com"><li>
+	<img  src="d2.png"/></li></a>
+  <a href="www.whatsapp.com"><li>
+	<img  src="d3.png"/></li></a>
+  <a href="www.instagram.com"><li>
+	<img src="d4.png"/></li></a></ul>
 </div>
 
 
 <div class="title">
-<h1 style="text-align:center; font-family:tahoma; font-weight:bold; font-size:72px;">SHOE BLISS</h1>	
+<h1 style="text-align:center; font-family:tahoma; font-weight:bold; font-size:72px;">SHOE-BLISS CONNECT</h1>	
 </div>
 
 <div class="brands">
@@ -199,7 +310,7 @@
 <div class="card" style="width:18rem;">
   <img src="shoe1.jpg"  class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Male Shoe</h5>
+    <h5 class="card-title">Men shoes</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
   <ul class="list-group list-group-flush">
@@ -261,7 +372,7 @@
   </div> </div>
 
    <div class="card" style="width:18rem;">
-  <img src="shoe5.jpg"  class="card-img-top" alt="...">
+  <img src="shoe5.jpg"  class="card-img-top" alt="..."> 
   <div class="card-body">
     <h5 class="card-title">Male Wears</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -484,7 +595,11 @@
     <a href="#" class="card-link">Card link</a>
     <a href="#" class="card-link">Another link</a>
   </div> </div>
+</div>
 
+
+<div class="view">
+  <div class="cards">
    <div class="card" style="width:18rem;">
   <img src="slider1.png"  class="card-img-top" alt="...">
   <div class="card-body">
@@ -579,8 +694,28 @@
     <a href="#" class="card-link">Card link</a>
     <a href="#" class="card-link">Another link</a>
   </div> </div>
-	</div>
+</div>
 
+	</div>
+<input  id="view" type="button" onclick="(change())" value="VIEW MORE"><br/>
+
+  <div class="footer">
+    <footer>
+      <header>REGISTER</header>
+      <form>
+      <label>Surname:</label><input type="text" name="surname" placeholder="Surname" style="width:280px;"><br/>
+      <label>Firstname:</label><input style="width:266px;" type="text" placeholder="Firstname" name="firstname"><br/>
+      <label for="validationServer">Phone Number:</label><input type="text" name="contact" placeholder="Phonenumber" style="width:226px;"><br/>
+      <label for="validationServer">Pickup-Address:</label><input type="text" name="contact" placeholder="Pickup-Address" style="width:218px;"><br/>
+      <label for="staticEmail">Email:</label><input type="@mailto" name="email" placeholder="Email" value="email@example.com" style="width:304px;"><br/>
+      <label>Password:</label><input type="password" placeholder="Password" name="password" style="width:272px;" required><br/>
+      <button class="btn" type="submit">Submit form</button>
+    </form>
+    </footer>
+  </div>
+
+<img src="logo.jpg" height="150px" width="150px" style="margin-left:43%">
+</div>
 <script type="text/javascript">
 	var image = document.getElementById("image");
 	var images = ["shoe.png","slider1.png","slider2.png","slider3.png","slider4.png","slider5.png"];
@@ -593,9 +728,60 @@
 	}else{
 		image.src = images[img];
 	}
-	img++
+	img++;
 	}
 	slide();
+</script>
+
+<script type="text/javascript">
+
+   var y = document.querySelector("header");
+  var body = document.querySelector(".nav");
+  var x = document.getElementById("study");
+  var z = document.getElementById("contained");
+  var view = document.querySelector(".view");
+   
+      
+
+var myVar = setInterval(myTime ,1800);
+function myTime(){
+  z.onclick = function(){
+   
+    body.style.display = "block";
+    body.style.zIndex = "99999";  
+    body.style.position = "absolute";
+    body.style.backgroundColor = "white"; 
+    body.style.paddingBottom = "60px";
+    body.style.paddingRight = "760px"; 
+    body.style.paddingLeft = "75px";
+   
+    
+    document.getElementById("menu").title = "CANCEL";  
+    document.getElementById("menu").src = "cancel.png";
+    z.onclick = function(){
+      document.getElementById("menu").src = "menu.png";
+      body.style.display = "none"; 
+   
+    }
+  }}
+
+  var container = document.getElementById("container");
+    document.onreadystatechange = function(){
+      var state = document.readyState;
+    if(state == 'interactive'){
+    document.getElementById('container').style.visibility = "hidden";
+    }else if(state == 'complete'){
+      setTimeout(function(){
+      document.getElementById('interactive');
+      var loader = document.getElementById('loader');
+      loader.style.visibility = "hidden";
+      container.style.visibility = "visible";
+      },3000);
+    }}
+
+     function change(){
+ view.style.display = "block";
+      }
 </script>
 </body>
 </html>
