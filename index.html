@@ -20,16 +20,17 @@
 }
 		#image{
 			max-width:500px;
-			height:350px;
+			height:300px;
 			width:950px;
 		}
 		.img{
 			right:0px;
 			margin:0px auto;
+			margin-bottom: 60px;
 			position:relative;
 			text-align:center;
 			background-color:pink;
-      clear:both;
+      		clear:both;
 		}
 
     .nav{
@@ -86,7 +87,7 @@
 			position:sticky;
 			float:right;
 			z-index:99;
-      padding-top:80px;
+            padding-top:80px;
 			top:0;
 			right:0;
 			} 
@@ -122,7 +123,7 @@
 		.search img{
 			height:55px;
 			width:50px;
-			margin:0px 0px -20px -57px;
+			margin:0px 0px -22px -57px;
 			border-radius:8px;
 		}
 		.search input{
@@ -223,6 +224,7 @@
     }
     .view{
       display: none;
+
     }
     #view{
       background-color:rgba(050,010,200,0.8);
@@ -257,9 +259,22 @@
       text-align: center;
       font-size: 11px;
     }
+    .btns button{
+      background-color:rgba(050,010,200,0.8);
+      color:white;
+      padding:7px 7px;
+      border:3px solid grey;
+      border-radius: 10px;
+      margin:-45px 150px 0px 0px;
+      height:50px;
+      width:120px;
+      }
+      .btns{
+      	margin:20px  10px 0px 0px;
+      }
 	</style>
-<meta name="viewport" content="width=device-width,initial-scale=0.1">
-  <meta name="viewport" content="width=device-width, initial-scale=0.1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width,initial-scale=0.3">
+  <meta name="viewport" content="width=device-width, initial-scale=0.3, shrink-to-fit=no">
   <link rel="icon" type="image/png" href="favicon.png"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     
@@ -303,10 +318,11 @@
 
 <div class="img"> 
 <img id="image" src="shoe.png" alt="shoe" title="shoe"/>
-<h5 class="bounceIn"><strong> WELCOME TO SHOE-BLISS CONNECT<br>SHOE WEB</h5>
-<p>we offer the best of Muslim Men Wear's</p></strong>
-<button type="button" class="btns" >Get Started </button>
-<button type="button" class="btns" >VIEW DEMO</button>
+<h5 class="bounceIn" style="font-size:40px; margin-top:-10px; color:white; text-shadow:1px 0px 3px brown;"><strong> WELCOME TO SHOE-BLISS CONNECT SHOE WEB</h5>
+<p style="font-size:30px; margin-top:-50px; color:brown; text-shadow:1px 0px 3px white;">where you get the latest trending designer shoe's </p></strong><br>
+<span class="btns" >
+<button class="btn"style="margin-right:39.5%;">Get Started </button>
+<button  class="btn" style="background-color:green; color:white;" >VIEW DEMO</button></span>
 </div>
 
 <div class="handles">
@@ -328,7 +344,7 @@
 
 <!-- jumbotrons -->
   <div class="jumbotron" style="background-color: white;">
-  <p class="lead" style="color: black;"><b style="color:pink; text-shadow:0px 0px 2px black;">SHOE-BLISS CONNECT</b> is shoe brand that provide you with the hottest, fashionable and trending shoe's from all best brand in the world, We bring you different collections of men, women and kid's foot wear's. Our main goal is to make you feet feel comfortable while walking your road down to success.</p>
+  <p class="lead" style="color: black;"><b style="color:pink; text-shadow:0px 0px 2px black;">SHOE-BLISS CONNECT</b> is a shoe brand that provide you with the hottest, fashionable and trending shoe's from all best brand in the world, We bring you different collections of men, women and kid's foot wear's. Our main goal is to make you feet feel comfortable while walking your road down to success.</p>
 </div>
 
 <div class="brands">
@@ -774,7 +790,7 @@
  <div class="media" style="margin-right:35px;">
       <h5 class="col">ABOUT US</h5>
       <img src="logo.jpg" alt="..." height="150px" width="180px" style="margin-left:44%;"/>
-      <p>SHOE-BLISS CONNECT is shoe design business company owned and runned by A. A. Umar, a business tycoon who has over the year's risen to stardom with his innovative ideas in the areas of latest shoes designs from variouse brand around the worlds</p>
+      <p>SHOE-BLISS CONNECT is a shoe design business company owned and runned by A. A. Umar, a business tycoon who has over the year's risen to stardom with his innovative ideas in the areas of latest shoes designs from variouse brand around the worlds</p>
     </div>
 
 
@@ -846,39 +862,38 @@ function myTime(){
      function change(){
  view.style.display = "block";
       }
+  
 
-     
-
-
+</script>
+<script type="text/javascript">
      var InCart = 10;
-     var arr = [document.getElementById('support'),document.getElementById('support'),
-                document.getElementById('support'),document.getElementById('support'),
-                document.getElementById('support'),document.getElementById('support')];
-     var x = [0,1,2,3,4,5];
-     x = Math.random()*arr.length;
+
+var cart = document.getElementById("support");
+var get = document.getElementById("int");
+var Incart = 0;
+InCart = [0,1,2,3,4,5,6,7];
+InCart = M ath.Random()*Incart.length;
+for(x = 0;x<=arr.length;x++){
  function addCart()
 {
-   
-    if (InCart <= 10)
-      
-   return 0;
-      if(incart <= 0){
-    InCart++;
-    var x = 0;
-    arr[x].innerHTML = "In Cart: " + InCart;
+    if (InCart <= 10){    
+	return 0;
+	InCart = "Add to Cart"+x;
 }
-
+    InCart++;    
+}
 function removeCart()
 {
     
-    if (InCart == 0)
+    if (InCart == 0){
         return 0; 
+        InCart = "Remove item"+x;
+    }
 
     InCart--;
-    var x = 0;
-    arr[x].innerHTML = "In Cart: " + InCart;
-}  
-      
+} } 
+
+
 </script>
 </body>
 </html>
