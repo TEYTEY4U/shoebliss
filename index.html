@@ -246,6 +246,19 @@
       float:right;
       margin:-55px 15px 0px 0px;
     }
+      .login{
+      display: none;
+    }
+    #login{
+      background-color:rgba(050,010,200,0.8);
+      color:white;
+      padding:10px 20px 40px 20px;
+      border:3px solid grey;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 18px;
+      margin:-55px 15px 50px 45px;
+    }
     #contained{
       position:sticky;
       z-index: 9999999;
@@ -342,12 +355,12 @@
 <h5 class="bounceIn" style="font-size:40px; margin-top:-25px; color:white; text-shadow:1px 0px 3px brown;"><strong> WELCOME TO SHOE-BLISS CONNECT SHOE WEB</h5>
 <p style="font-size:30px; margin-top:5px; color:brown; text-shadow:1px 0px 3px white;">where you get the latest trending designer shoe's </p></strong><br>
 <span class="btns" >
-<button class="btn"style="margin-right:39.5%;">Get Started </button>
+<button class="btn" style="margin-right:39.5%;">Get Started</button>
 <button  class="btn" style="background-color:green; color:white;" >VIEW DEMO</button></span>
 </div>
 
 <div class="handles">
-	<ul>
+	<ol>
   <a href="www.facebook.com"><li>
 	<img src="d1.png"/></li></a>
   <a href="www.tweeter.com"><li>
@@ -355,7 +368,7 @@
   <a href="www.whatsapp.com"><li>
 	<img  src="d3.png"/></li></a>
   <a href="www.instagram.com"><li>
-	<img src="d4.png"/></li></a></ul>
+	<img src="d4.png"/></li></a></ol>
 </div>
 
 
@@ -682,7 +695,7 @@
     <a href="#" class="card-link">Card link</a>
     <a href="#" class="card-link">Another link</a>
   </div> </div>
-
+</div>
 
 
 <div class="view">
@@ -783,9 +796,10 @@
   </div> </div>
 </div></div>
 
-	</div>
+	
 <input  id="view" type="button" onclick="(change())" value="VIEW MORE"><br/>
 
+<div class="login">
   <div class="footer">
     <footer>
       <header>REGISTER</header>
@@ -800,16 +814,19 @@
     </form>
     </footer>
   </div>
+</div>
 
+<input  id="login" type="button" onclick="(changes())" value="Login"><br/>
  <div class="media" style="margin-right:35px;">
       <h5 class="col" ><b>ABOUT US</b>
       <p><b style="color:pink; text-shadow:0px 0px 2px black;">SHOE-BLISS CONNECT</b> is a shoe design business company owned and runned by A. A. Umar, a business tycoon who has over the year's risen to stardom with his innovative ideas in the areas of latest shoes designs from variouse brand around the worlds</p></h5>
     </div>
 
 
+
 <img src="logo.jpg" alt="logo" height="150px" width="180px" style="margin-left:44.5%;"/>
 </div>
-'/'
+
 <script type="text/javascript">
 	var imager = document.getElementById("image");
 
@@ -836,6 +853,9 @@
   var z = document.getElementById("contained");
   var spy = document.getElementById("spin");
   var view = document.querySelector(".view");
+  var views = document.getElementById("view");
+  var login = document.querySelector(".login");
+  var logins = document.getElementById("login");
   var list = document.querySelector("ul");
    
       
@@ -875,14 +895,18 @@ function myTime(){
       var loader = document.getElementById('loader');
       loader.style.visibility = "hidden";
       container.style.visibility = "visible";
-      },3000);
+      },3);
     }}
 
      function change(){
  view.style.display = "block";
+ views.style.display = "none";
       }
   
-
+function changes(){
+ login.style.display = "block";
+ logins.style.display = "none";
+}
 </script>
 </body>
 </html>
